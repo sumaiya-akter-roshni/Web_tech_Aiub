@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic metadata for the page -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Personal academic profile page with semantic HTML, table and contact form.">
+    <meta name="keywords" content="academic profile, HTML5, semantic tags, education table, contact form">
+    <meta name="author" content="Roshni">
+    <title>Academic Profile - Roshni</title>
+</head>
+
+<body>
+
+    <!-- Header: name and navigation -->
+    <header>
+        <h1>Roshni's Academic Profile</h1>
+
+        <nav>
+            <a href="#bio">Biography</a> |
+            <a href="#education">Education</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+
+        <!-- Biography section -->
+        <section id="bio">
+            <h2>Biography</h2>
+            <p>
+                My name is Roshni. I am a student and I am learning web development basics.
+                This page is made for my HTML lab to practice semantic tags, tables, and forms.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- Education section + table -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <table border="1" title="Education details table">
+                <caption>My Education Information</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Degree</th>
+                        <th scope="col">Institution</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Result</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>BSc in CSE</td>
+                        <td>AIUB</td>
+                        <td>2022 - Present</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>HSC</td>
+                        <td>College Name</td>
+                        <td>2021</td>
+                        <td>GPA 5.00</td>
+                    </tr>
+                    <tr>
+                        <td>SSC</td>
+                        <td>School Name</td>
+                        <td>2019</td>
+                        <td>GPA 5.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Contact section + advanced form -->
+        <section id="contact">
+            <h2>Contact Form</h2>
+            <p>If you want to contact me, you can fill up this form.</p>
+
+            <form action="#" method="post">
+
+                <label for="name">Name:</label><br>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Write your full name"
+                    maxlength="40"
+                    required>
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@gmail.com"
+                    maxlength="50"
+                    required>
+                <br><br>
+
+                <label for="phone">Phone:</label><br>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="01XXXXXXXXX"
+                    pattern="01[0-9]{9}"
+                    maxlength="11">
+                <br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message here..."
+                    maxlength="200"
+                    required></textarea>
+                <br><br>
+
+                <input type="submit" value="Send">
+                <input type="reset" value="Clear">
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer: contact/copyright -->
+    <footer>
+        <p>
+            Contact: roshni@example.com
+        </p>
+        <p>
+            &copy; 2026 Roshni. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+
+</html>
