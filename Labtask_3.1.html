@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab Task 03 - Box Model & Display</title>
+  <link rel="stylesheet" href="style3.css" />
+</head>
+
+<body>
+
+  <h1 class="pageTitle" title="Page title">Student Information Page</h1>
+
+  <div class="box boxA">
+    <h2>Box A (Default box-sizing)</h2>
+    <p>
+      This box uses the <b>default</b> box sizing (content-box).
+      Same width as Box B, but it becomes bigger because padding + border add extra size.
+    </p>
+  </div>
+
+  <div class="box boxB">
+    <h2>Box B (box-sizing: border-box)</h2>
+    <p>
+      This box uses <b>box-sizing: border-box</b>.
+      Padding + border are included inside the declared width, so it stays the same size.
+    </p>
+  </div>
+
+  <div class="box boxC">
+    <h2>Box C (Different margin/padding/border)</h2>
+    <p>
+      This box has different padding, border, margin,
+      width and height to show spacing clearly.
+    </p>
+  </div>
+
+  <hr />
+  <h2>Display Properties Demo</h2>
+
+  <div class="displayBox blockDiv">DIV: display: block (takes full line)</div>
+
+  <div class="displayLine">
+    <span class="tag inlineSpan">SPAN: inline</span>
+    <span class="tag inlineSpan">SPAN: inline 2</span>
+    <span class="tag hiddenSpan">visibility: hidden</span>
+    <span class="tag noneSpan">display: none</span>
+  </div>
+
+  <p class="inlineBlockPara">P: inline-block A</p>
+  <p class="inlineBlockPara">P: inline-block B</p>
+
+  <p class="noneParagraph">This paragraph is display:none (you will not see it)</p>
+
+</body>
+</html>

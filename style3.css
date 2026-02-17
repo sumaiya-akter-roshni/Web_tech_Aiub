@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #fffafc;
+  color: #333;
+}
+
+.pageTitle {
+  color: #d63384;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box {
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.boxA {
+  width: 320px;
+  min-height: 140px;
+  padding: 20px;
+  border: 8px solid #ffb3c6;
+  margin: 12px 0;
+  
+}
+
+.boxB {
+  width: 320px;
+  min-height: 140px;
+  padding: 20px;
+  border: 8px solid #bde0fe;
+  margin: 12px 0;
+  box-sizing: border-box; 
+}
+
+
+.boxC {
+  width: 100%;
+  height: 110px;
+  padding: 14px 22px;
+  border: 4px dashed #cdb4db;
+  margin: 24px 0;
+  background: #fff0f6;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+  color: #6f42c1;
+}
+
+.box p {
+  margin: 0;
+}
+
+
+.displayBox {
+  padding: 12px;
+  border: 2px solid #ffd6a5;
+  background: #fff0f6;
+  margin: 10px 0;
+}
+
+.blockDiv {
+  display: block;
+}
+
+.inlineSpan {
+  display: inline;
+}
+
+.displayLine {
+  margin: 10px 0;
+}
+
+
+.inlineBlockPara {
+  display: inline-block;
+  width: 220px;
+  padding: 10px;
+  margin: 8px 6px 10px 0;
+  border: 2px solid #ffafcc;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.noneParagraph {
+  display: none;
+}
+
+
+.hiddenSpan {
+  visibility: hidden; 
+}
+
+.noneSpan {
+  display: none; 
+}
+
+.tag {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #f8f9fa;
+  margin-right: 8px;
+  font-size: 14px;
+}
