@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg: #f0f2f5;
+    --container-bg: #fff;
+    --text-main: #333;
+    --text-sub: #555;
+    --input-bg: #fff;
+    --input-border: #ddd;
+    --border-soft: #eee;
+    --student-item-bg: #fafafa;
+    --student-item-border: #e8e8e8;
+    --stats-text: #666;
+    --button-primary: #4a90d9;
+    --button-primary-hover: #357abd;
+    --present-bg: #e6f9e6;
+    --present-border: #7bc67b;
+    --highlight-bg: #fff3cd;
+    --highlight-border: #f0ad4e;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --body-bg: #101317;
+    --container-bg: #1b222b;
+    --text-main: #e8edf3;
+    --text-sub: #bdc7d3;
+    --input-bg: #131922;
+    --input-border: #33404f;
+    --border-soft: #2a3440;
+    --student-item-bg: #141b24;
+    --student-item-border: #2f3a47;
+    --stats-text: #a8b5c5;
+    --button-primary: #5a9ce0;
+    --button-primary-hover: #4a8dd1;
+    --present-bg: #213628;
+    --present-border: #4a8358;
+    --highlight-bg: #4d3f1c;
+    --highlight-border: #d79e36;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--body-bg);
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--container-bg);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+.theme-toggle-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+#themeToggleBtn {
+    padding: 8px 14px;
+    border: 2px solid var(--button-primary);
+    background: transparent;
+    color: var(--button-primary);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#themeToggleBtn:hover {
+    background: var(--button-primary);
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-main);
+    margin-bottom: 24px;
+    font-size: 1.6rem;
+}
+
+h2 {
+    color: var(--text-sub);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.form-section {
+    margin-bottom: 16px;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 2px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--text-main);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #4a90d9;
+}
+
+#rollInput {
+    flex: 0.5;
+}
+
+.input-group button {
+    padding: 10px 20px;
+    background-color: var(--button-primary);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.input-group button:hover:not(:disabled) {
+    background-color: var(--button-primary-hover);
+}
+
+.input-group button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.action-buttons button {
+    padding: 8px 16px;
+    border: 2px solid var(--button-primary);
+    background: var(--input-bg);
+    color: var(--button-primary);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-buttons button:hover {
+    background: var(--button-primary);
+    color: #fff;
+}
+
+.search-section {
+    margin-bottom: 16px;
+}
+
+.search-section input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--text-main);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-section input:focus {
+    border-color: #4a90d9;
+}
+
+
+#studentList {
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+#studentList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border: 2px solid var(--student-item-border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background: var(--student-item-bg);
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+#studentList li.present {
+    background-color: var(--present-bg);
+    border-color: var(--present-border);
+}
+
+#studentList li.highlighted {
+    background-color: var(--highlight-bg);
+    border-color: var(--highlight-border);
+    border-width: 3px;
+    font-weight: bold;
+}
+
+.student-info {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.student-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.student-actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.student-actions button:hover {
+    opacity: 0.8;
+}
+
+.btn-present {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.btn-present.marked {
+    background-color: #999;
+}
+
+.btn-edit {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.edit-input {
+    padding: 4px 8px;
+    border: 1px solid var(--button-primary);
+    background: var(--input-bg);
+    color: var(--text-main);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    outline: none;
+    width: 70px;
+}
+
+.edit-input.name-edit {
+    width: 140px;
+}
+
+.btn-save {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.btn-cancel {
+    background-color: #999;
+    color: #fff;
+}
+
+.stats {
+    border-top: 2px solid var(--border-soft);
+    padding-top: 12px;
+}
+
+.stats p {
+    color: var(--stats-text);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
