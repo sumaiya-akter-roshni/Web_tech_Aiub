@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header id="header">
+        <nav class="navbar">
+            <a href="#home" class="nav-logo">Sumaiya Akter Roshni</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                
+                <li><a href="#about">About Me</a></li>
+                
+                <li><a href="#skills">Skills</a></li>
+                
+                <li><a href="#projects">Projects</a></li>
+                
+                <li><a href="#contact">Contact</a></li>
+                
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                        <span class="icon-sun">&#9788;</span>
+                        <span class="icon-moon">&#9790;</span>
+                    </button>
+                </li>
+                
+            </ul>
+
+
+        </nav>
+    </header>
+<main>
+        
+        <section id="home" class="hero-section">
+        <div class="hero-content">
+                <h1 class="hero-greeting">Hi, I'am</h1>
+                
+                <h2 class="hero-name" id="typingName"></h2>
+                
+                <h3 class="hero-title">I'm Web Designer</h3>
+                
+                <p class="hero-description">
+                    I’m a designer, developer, and creator who enjoys building things that actually matter. I like solving problems, exploring new ideas, and always finding ways to improve what I do.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    <a href="#" class="btn btn-outline">My Resume</a>
+                </div>
+
+        </div>
+        
+        <div class="hero-socials">
+
+            <a href="https://github.com/sumaiya-akter-roshni" target="_blank">
+                <img class="github-icon-light" src="Icon/githubDark.png" width="30" alt="GitHub Light Icon">
+                <img class="github-icon-dark" src="Icon/githubLight.png" width="30" alt="GitHub Dark Icon">
+            </a>
+
+            <a href="https://linkedin.com/in/your-linkedin" target="_blank">
+                <img class="linkedin-icon-light" src="Icon/linkedinDark.png" width="30" alt="LinkedIn">
+                <img class="linkedin-icon-dark" src="Icon/linkedinLight.png" width="30" alt="LinkedIn">
+            </a>
+
+            <a href="#" target="_blank">
+                <img class="twitter-icon-light" src="Icon/twitterDark.png" width="30" alt="Twitter">
+                <img class="twitter-icon-dark" src="Icon/twitterLight.png" width="30" alt="Twitter">
+            </a>
+
+            <a href="#" target="_blank">
+                <img class = "facebook-icon-light"src="Icon/facebookDark.png" width="30" alt="Facebook">
+                <img class = "facebook-icon-dark"src="Icon/facebookLight.png" width="30" alt="Facebook">
+            </a>
+        </div>
+
+        </section>
+
+        
+        <section id="about" class="about-section">
+            <div class="container">
+               
+                <h2 class="section-title">About Me</h2>
+               
+                <div class="about-grid">
+                    
+                    <div class="about-image">
+                        <div class="about-img-wrapper">
+                            <img src="Image/MyPicture.jpeg" alt="Profile Photo">
+                        </div>
+                    </div>
+               
+                    <div class="about-text">
+                        <h3>A professional web designer and developer.</h3>
+                        
+                        <p>
+                            I’m a creative web designer who loves building websites that are both beautiful and easy to use. 
+                            I work with HTML, CSS, JavaScript, and modern design principles to create clean, functional, and engaging digital experiences that people enjoy using.
+                        </p>
+                        
+                        <p>
+                            I believe in writing clean code, creating pixel-perfect designs, and always putting the user first. 
+                            Every project I work on is a chance to explore new ideas, push my creativity, and deliver my best work.
+                        </p>
+                        
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            
+                            <div class="stat">
+                                <span class="stat-number">1+</span>
+                                <span class="stat-label">Projects Done</span>
+                            </div>
+
+                            <div class="stat">
+                                <span class="stat-number">1+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid" id="skillsGrid">
+                    
+                </div>
+            </div>
+        </section>
+
+       
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-filters" id="projectFilters">
+                    
+                </div>
+                <div class="projects-grid" id="projectsGrid">
+                   
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="contact" class="contact-section">
+
+            <div class="container">
+                
+                <h2 class="section-title">Contact Me</h2>
+
+                <p class="contact-subtitle">Have a project in mind? Let's work together!</p>
+                
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" autocomplete="name">
+                            <span class="error-msg" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" autocomplete="email">
+                            <span class="error-msg" id="emailError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                        <span class="error-msg" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Your Message"></textarea>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    
+                    <div class="form-success" id="formSuccess">
+                        &#10003; Message sent successfully! Thank you.
+                    </div>
+                    
+                </form>
+
+            </div>
+
+        </section>
+    
+</main>
+
+   
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Sumaiya Akter Roshni. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
